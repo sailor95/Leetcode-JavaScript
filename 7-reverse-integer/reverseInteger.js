@@ -16,4 +16,9 @@ var reverse_2 = function (x) {
   if (result > Math.pow(2, 31) - 1 || result < -Math.pow(2, 31)) return 0;
   return result * Math.sign(x);
 }
-console.log(reverse_2(123));
+
+// v3: 
+var reverse_3 = function (x) {
+  let result = parseInt(Math.abs(x).toString().split('').reverse().join('')) * Math.sign(x);
+  return (result >= -0x80000000 && result <= 0x7fffffff) ? result : 0;
+}
