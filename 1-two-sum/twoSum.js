@@ -48,4 +48,19 @@ var twoSum_4 = function (nums, target) {
   return [];
 };
 
+// v5: 124ms
+const twoSum_5 = (arr, sum) => {
+  let index_1 = 0, index_2;
+  if (!arr) return [];
+  while (index_1 < arr.length - 1) {
+    index_2 = arr.indexOf(sum - arr[index_1], index_1 + 1);
+    if (index_2 > 0) {
+      return [index_1, index_2];
+    } else {
+      index_1++;
+    }
+  }
+  return [];
+}
+
 console.log(twoSum_1(nums, target));
