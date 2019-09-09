@@ -30,4 +30,8 @@ const flip_1 = a => {
   return output;
 };
 
-console.log(flip_1(input1));
+// 64 ms 72.75%
+const flip_2 = A =>
+  A.reduce((image, row) => [...image, row.map(num => +!num).reverse()], []);
+
+console.log(flip_2(input1));
