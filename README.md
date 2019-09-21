@@ -8,7 +8,7 @@ Do basic tags:
 - array
 - string
 - tree
-- linkedlist
+- linked-list
 - math
 
 [Reference](https://www.zhihu.com/question/36738189)
