@@ -31,6 +31,12 @@ const isUnivalTree_recur2 = root => {
     return bLeftTrue && bRightTrue
 }
 
+const isUnivalTree_recur3 = (node, val = node.val) =>
+    node ? node.val === val
+        && isUnivalTree(node.left, val)
+        && isUnivalTree(node.right, val)
+        : true;
+
 // 48 ms, faster than 94.99% 
 const isUnivalTree_iter = root => {
     const queue = [root],
