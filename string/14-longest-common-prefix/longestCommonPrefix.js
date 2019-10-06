@@ -44,5 +44,22 @@ let longestCommonPrefix_2 = function (inRay) {
   return ray1.substring(0, a); //return the substring from ray1's start to loop counter in common
 }
 
+// 52 ms, faster than 92.54% 
+const longestCommonPrefix_3 = strs => {
+  var prefix = '';
+
+  if (strs.length === 0) return prefix;
+
+  for (var i = 0; i < strs[0].length; i++) {
+    if (strs.every(str => str[i] === strs[0][i])) {
+      prefix += strs[0][i];
+    } else {
+      break;
+    }
+  }
+
+  return prefix;
+}
+
 const tester = ["flower", "flow", "flight"];
 console.log(longestCommonPrefix_2(tester));
