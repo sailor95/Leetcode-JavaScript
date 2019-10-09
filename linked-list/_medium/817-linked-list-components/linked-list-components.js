@@ -49,4 +49,24 @@ const numComponents_1 = (head, G) => {
         .length;
 }
 
+// 64 ms, faster than 90%
+const numComponents_2 = (head, G) => {
+    const set = new Set(G);
+    let pointer = head,
+        stack = [],
+        ans = 0;
+    while (pointer) {
+        if (set.has(pointer.val)) {
+            stack.push(pointer.val);
+        } else {
+            if (stack.length) {
+                ans++;
+                stack = [];
+            }
+        }
+        pointer = pointer.next;
+    }
+    return (stack.length) ? ans + 1 : ans;
+};
+
 console.log([0, 1, 2].join('').split('2').filter(c => c ? c : null));
