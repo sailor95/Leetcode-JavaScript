@@ -2,7 +2,7 @@
 // Folder name: 883-projection-area-of-3d-shapes
 // File name: projection-area-of-3d-shapes.js
 
-const transferFileName = n => {
+const transferFileName = (n) => {
   let folderName = n,
     fileName = n;
 
@@ -11,8 +11,7 @@ const transferFileName = n => {
 
   fileName = folderName.replace(/\d+/, '').replace(/-/, '').concat('.js');
   console.log(fileName);
-}
+};
 
-
-const name = '1476. Subrectangle Queries';
+const name = '1347. Minimum Number of Steps to Make Two Strings Anagram';
 transferFileName(name);
