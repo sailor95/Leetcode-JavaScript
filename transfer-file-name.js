@@ -13,5 +13,5 @@ const transferFileName = n => {
   console.log(fileName);
 };
 
-const name = '328. Odd Even Linked List';
+const name = '1551. Minimum Operations to Make Array Equal';
 transferFileName(name);
