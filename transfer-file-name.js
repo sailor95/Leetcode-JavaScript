@@ -2,16 +2,16 @@
 // Folder name: 883-projection-area-of-3d-shapes
 // File name: projection-area-of-3d-shapes.js
 
-const transferFileName = n => {
+const transferFileName = (n) => {
   let folderName = n,
     fileName = n;
 
-  folderName = folderName.replace(/\./, '').replace(/\s/g, '-').toLowerCase();
+  folderName = folderName.replace(/\./, "").replace(/\s/g, "-").toLowerCase();
   console.log(folderName);
 
-  fileName = folderName.replace(/\d+/, '').replace(/-/, '').concat('.js');
+  fileName = folderName.replace(/\d+/, "").replace(/-/, "").concat(".js");
   console.log(fileName);
 };
 
-const name = '1551. Minimum Operations to Make Array Equal';
+const name = "535. Encode and Decode TinyURL";
 transferFileName(name);
