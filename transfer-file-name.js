@@ -13,5 +13,5 @@ const transferFileName = n => {
   console.log(fileName);
 };
 
-const name = '1551. Minimum Operations to Make Array Equal';
+const name = '1557. Minimum Number of Vertices to Reach All Nodes';
 transferFileName(name);
